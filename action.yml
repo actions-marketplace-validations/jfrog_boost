@@ -1,7 +1,9 @@
 name: "JFrog Boost"
 description: "Enhance CI performance and observability with Boost"
 author: "FastCI Team @ JFrog"
-
+branding:
+  color: green
+  icon: fast-forward
 inputs:
   version:
     description: >
