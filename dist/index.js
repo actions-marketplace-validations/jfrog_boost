@@ -57378,7 +57378,158 @@ async function resolveBoostBinaryPath() {
     return binaryPath;
 }
 
+;// CONCATENATED MODULE: ./src/utils/config-fetch.ts
+
+
+
+
+
+// Boost workspace config lives under $GITHUB_WORKSPACE/.boost/config.toml.
+// Matches internal/config/config.go: ConfigDir/ConfigFileName.
+const CONFIG_REL_PATH = ".boost/config.toml";
+// Single-attempt timeout for the GitHub API fallback. Bounded so a slow /
+// hung API doesn't blow past the action's setup_timeout_seconds budget.
+const API_TIMEOUT_MS = 1500;
+// resolveApiBaseUrl picks the correct REST API base URL for the current
+// runner. Covers both github.com and GitHub Enterprise Server (GHES) —
+// the latter is what JFrog enterprise customers and other on-prem GitHub
+// tenants run. Order of resolution:
+//
+//   1. GITHUB_API_URL — the canonical env var set automatically by the
+//      Actions runner on every platform (github.com AND GHES). Prefer it
+//      when available because it already encodes the /api/v3 suffix for
+//      GHES without string-matching hostnames.
+//   2. GITHUB_SERVER_URL-derived fallback — for older runners or tests
+//      that only set GITHUB_SERVER_URL. Uses a strict host check
+//      (host === "github.com") instead of substring matching so a GHES
+//      hostname like "github.enterprise.com" isn't misrouted to the
+//      public API.
+//   3. Default to https://api.github.com when nothing is set.
+function resolveApiBaseUrl() {
+    const apiUrl = (process.env.GITHUB_API_URL || "").trim();
+    if (apiUrl) {
+        return apiUrl;
+    }
+    const serverUrl = getGHServerUrl().trim();
+    try {
+        const host = new URL(serverUrl).host;
+        if (host === "github.com" || host === "www.github.com") {
+            return "https://api.github.com";
+        }
+        return `${serverUrl.replace(/\/$/, "")}/api/v3`;
+    }
+    catch {
+        return "https://api.github.com";
+    }
+}
+/**
+ * ensureBoostConfig makes `.boost/config.toml` available on the runner's
+ * filesystem before `boost ci-setup` runs, so the action can be placed
+ * BEFORE `actions/checkout` and still pick up the repo config.
+ *
+ * Order of resolution:
+ *   1. Filesystem — `$GITHUB_WORKSPACE/.boost/config.toml` already checked out.
+ *   2. GitHub API at GITHUB_SHA — fetch the file at the exact commit the
+ *      workflow is running on. For pull_request events this is the merge
+ *      commit, which contains the PR branch's config if one was added
+ *      there; for push/workflow_dispatch it's the tip commit of the ref.
+ *      This is the "current branch" case.
+ *   3. GitHub API at the default branch — fallback for workflows where
+ *      GITHUB_SHA is unset, or where the current commit doesn't ship the
+ *      file but the default branch does (e.g. a feature branch created
+ *      before `.boost/config.toml` landed on master).
+ *   4. Give up silently — boost falls back to zero-value config (same
+ *      as today).
+ *
+ * Failures are non-fatal: this helper never throws. The caller treats a
+ * missing config the same way `boost ci-setup` already does.
+ */
+async function ensureBoostConfig() {
+    const workspace = process.env.GITHUB_WORKSPACE;
+    if (!workspace) {
+        core.debug("GITHUB_WORKSPACE not set; skipping config pre-fetch");
+        return;
+    }
+    const configPath = external_path_.join(workspace, CONFIG_REL_PATH);
+    if (external_fs_.existsSync(configPath)) {
+        core.debug(`Boost config already on disk: ${configPath}`);
+        return;
+    }
+    const repoEnv = process.env.GITHUB_REPOSITORY || "";
+    const [owner, repo] = repoEnv.split("/");
+    if (!owner || !repo) {
+        core.debug(`GITHUB_REPOSITORY unset or invalid (${repoEnv}); skipping API fallback`);
+        return;
+    }
+    const token = getGithubToken();
+    if (!token) {
+        core.debug("No GitHub token available; skipping API fallback");
+        return;
+    }
+    const sha = (process.env.GITHUB_SHA || "").trim();
+    try {
+        let content = null;
+        let source = "";
+        if (sha) {
+            content = await fetchConfigFromApi(token, owner, repo, sha);
+            if (content !== null) {
+                source = `sha:${sha.slice(0, 7)}`;
+            }
+            else {
+                core.debug(`No ${CONFIG_REL_PATH} at ${sha.slice(0, 7)}; falling back to default branch`);
+            }
+        }
+        if (content === null) {
+            content = await fetchConfigFromApi(token, owner, repo);
+            if (content !== null) {
+                source = "default_branch";
+            }
+        }
+        if (content === null) {
+            core.debug(`No ${CONFIG_REL_PATH} found via GitHub API; continuing without it`);
+            return;
+        }
+        await external_fs_.promises.mkdir(external_path_.dirname(configPath), { recursive: true });
+        await external_fs_.promises.writeFile(configPath, content, "utf-8");
+        core.info(`Fetched ${CONFIG_REL_PATH} from ${owner}/${repo} via GitHub API (${source})`);
+    }
+    catch (err) {
+        core.debug(`Config pre-fetch failed (non-fatal): ${err}`);
+    }
+}
+async function fetchConfigFromApi(token, owner, repo, ref) {
+    const baseUrl = resolveApiBaseUrl();
+    core.debug(`Config API baseUrl: ${baseUrl}, ref: ${ref ?? "<default_branch>"}`);
+    const octokit = new dist_src_Octokit({ auth: token, baseUrl });
+    const params = {
+        owner,
+        repo,
+        path: CONFIG_REL_PATH,
+    };
+    if (ref) {
+        params.ref = ref;
+    }
+    try {
+        const resp = await Promise.race([
+            octokit.repos.getContent(params),
+            new Promise((_, reject) => setTimeout(() => reject(new Error("Config API timeout")), API_TIMEOUT_MS)),
+        ]);
+        if ("content" in resp.data && typeof resp.data.content === "string") {
+            return Buffer.from(resp.data.content, "base64").toString("utf-8");
+        }
+        return null;
+    }
+    catch (err) {
+        const status = err.status;
+        if (status === 404) {
+            return null;
+        }
+        throw err;
+    }
+}
+
 ;// CONCATENATED MODULE: ./src/index.ts
+
 
 
 
@@ -57402,6 +57553,10 @@ async function setup() {
         args.push("--accept-terms", acceptTerms);
     }
     args.push("github");
+    // Fetch .boost/config.toml via the GitHub API when it's not already on
+    // disk. This lets the action run BEFORE actions/checkout and still pick up
+    // the repo's Boost config.
+    await ensureBoostConfig();
     const nodeBinDir = external_path_.dirname(process.execPath);
     const nodeVersionDir = external_path_.dirname(nodeBinDir);
     const nodeBaseDir = external_path_.dirname(nodeVersionDir);
