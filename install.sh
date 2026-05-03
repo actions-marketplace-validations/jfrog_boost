@@ -2,7 +2,8 @@
 set -euo pipefail
 
 REPO="jfrog/boost"
-INSTALL_DIR="${BOOST_INSTALL_DIR:-$HOME/.local/bin}"
+INSTALL_DIR="${BOOST_INSTALL_DIR:-/usr/local/bin}"
+SUDO=()
 
 OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
 ARCH="$(uname -m)"
@@ -16,34 +17,73 @@ TAG="$(curl -fsSLI -o /dev/null -w '%{url_effective}' "https://github.com/$REPO/
 ARCHIVE="boost-${OS}-${ARCH}.tar.gz"
 TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
 
+can_write_install_dir() {
+  if [ -d "$INSTALL_DIR" ]; then
+    [ -w "$INSTALL_DIR" ]
+    return
+  fi
+
+  parent="$INSTALL_DIR"
+  while [ ! -e "$parent" ] && [ "$parent" != "/" ]; do
+    parent="$(dirname "$parent")"
+  done
+
+  [ -d "$parent" ] && [ -w "$parent" ]
+}
+
+determine_sudo() {
+  if [ "$(id -u)" -eq 0 ] || can_write_install_dir; then
+    return
+  fi
+
+  if ! command -v sudo >/dev/null 2>&1; then
+    echo "error: $INSTALL_DIR is not writable and sudo is not available." >&2
+    echo "Set BOOST_INSTALL_DIR to a writable directory, for example:" >&2
+    echo "  BOOST_INSTALL_DIR=\"\$HOME/.local/bin\" curl -fsSL https://raw.githubusercontent.com/$REPO/main/install.sh | bash" >&2
+    exit 1
+  fi
+
+  echo "→ Installing to $INSTALL_DIR requires sudo"
+  if ! sudo -v; then
+    echo "error: sudo authentication failed." >&2
+    echo "Set BOOST_INSTALL_DIR to a writable directory, for example:" >&2
+    echo "  BOOST_INSTALL_DIR=\"\$HOME/.local/bin\" curl -fsSL https://raw.githubusercontent.com/$REPO/main/install.sh | bash" >&2
+    exit 1
+  fi
+  SUDO=(sudo)
+}
+
+determine_sudo
+
 echo "→ Downloading $ARCHIVE ($TAG)"
 curl -fsSL "https://github.com/$REPO/releases/download/$TAG/$ARCHIVE" -o "$TMP/$ARCHIVE"
 tar -xzf "$TMP/$ARCHIVE" -C "$TMP"
 [ -f "$TMP/boost" ] || { echo "archive missing 'boost' binary" >&2; exit 1; }
 
-mkdir -p "$INSTALL_DIR"
-install -m 0755 "$TMP/boost" "$INSTALL_DIR/boost"
+"${SUDO[@]}" mkdir -p "$INSTALL_DIR"
+"${SUDO[@]}" install -m 0755 "$TMP/boost" "$INSTALL_DIR/boost"
 echo "→ Installed: $("$INSTALL_DIR/boost" version 2>/dev/null || echo unknown) to $INSTALL_DIR/boost"
 
-# Warn (don't fail) when the install dir is off PATH so the user knows to fix their rc file.
+# Warn (don't fail) when the install dir is off PATH so the user knows to fix
+# the current shell and future shell sessions.
 BOOST_CMD="boost"
 case ":${PATH:-}:" in
   *":$INSTALL_DIR:"*) ;;
   *)
-    echo "⚠ $INSTALL_DIR is not on PATH. Add to your shell rc: export PATH=\"$INSTALL_DIR:\$PATH\"" >&2
+    echo "⚠ $INSTALL_DIR is not on PATH. Run now and add to your shell rc: export PATH=\"$INSTALL_DIR:\$PATH\"" >&2
     BOOST_CMD="\"$INSTALL_DIR/boost\""
     ;;
 esac
 
 echo
-echo "→ Boost is installed! Now all that is left to do is add Boost to your GitHub Actions using:"
+echo "→ Boost is installed! Choose your next step:"
 echo
-echo "    cd /path/to/your-repo"
-echo "    $BOOST_CMD init --github-actions"
+echo "→ Accelerate your local agents by running in your terminal:"
 echo
-echo "→ This will start monitoring every command in your CI."
+echo "   $ $BOOST_CMD init"
 echo
-echo "→ When the first CI run with Boost installed is complete, run your first Boost operation:"
-echo "    - Identify the bottlenecks in your CI"
-echo "    - Identify the flaky tests that break your CI"
-echo "    - Suggest optimizations to your build process"
+echo "→ Accelerate your agents in a specific repository by running:"
+echo
+echo "   $ cd /path/to/your-repo"
+echo "   $ $BOOST_CMD init"
+
