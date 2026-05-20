@@ -37,13 +37,13 @@
 
 ---
 
-Humans and coding agents spend too much time waiting for commands to finish and sifting through noisy output. **Boost** is a single binary that drops into three places at once:
+**Boost** turns noisy command runs into short, useful signals for agents and CI. It saves tokens, speeds up reruns, and helps teams build an agentic coding factory with one binary:
 
 - your **terminal** — prefix any command with `boost`
 - your **coding agent** — `boost init` wires up Cursor, Claude Code, Codex, Gemini CLI, and more
 - your **CI** — one line: `uses: jfrog/boost@v0`
 
-Same binary, same acceleration, same telemetry — wherever your builds run.
+Same acceleration, same token savings, same CI visibility — wherever your builds run.
 
 ## Quick Start
 
@@ -71,7 +71,7 @@ Run the interactive setup in any project:
 boost init
 ```
 
-It detects your installed editors and CI providers and registers hooks so every tool call the agent makes gets wrapped by boost. Re-run it any time your editor / agent list changes.
+It detects your installed editors and CI providers and registers hooks so agent commands run through boost. Re-run it any time your editor / agent list changes.
 
 **CI** — one line in your workflow
 
@@ -86,9 +86,9 @@ The action pins to the rolling `v0` major; see [releases](https://github.com/jfr
 
 ## Why Boost
 
-- **One binary, three surfaces** — CLI, coding agent, and CI all share the same runtime and behave identically.
-- **60–90% fewer log tokens** — strips noise from command output before it reaches your agent's context window.
-- **Deep OTel context** — every wrapped command emits OpenTelemetry traces and metrics your agents can reason about.
+- **One binary for agents and CI** — local commands, coding agents, and workflows share the same fast path.
+- **60–90% fewer log tokens** — noisy output becomes short summaries before it reaches your agent.
+- **CI context agents can use** — wrapped commands expose timing, cache hits, and exit codes through OpenTelemetry.
 
 ## Before / after
 
@@ -96,7 +96,7 @@ Same `npm ci`, same result. What changes:
 
 - **~15× fewer tokens** in your agent's context — 9.8k → 640 on a typical install.
 - **Faster reruns** via content-addressed cache — seconds instead of minutes.
-- **Deep OTel trace** of every command — timing, cache hits, exit code — routable to your backend.
+- **Clear CI signal** for every command — timing, cache hits, and exit code without the log wall.
 
 ```bash
 # Without boost — ~9,800 tokens of log noise in your agent's context
@@ -120,10 +120,10 @@ $ boost npm ci
 
 Prefix any command with `boost` — anywhere you'd normally run it.
 
-- `boost docker build ...` — compressed build log, layer-cache summary, Docker metrics in OTel
+- `boost docker build ...` — compressed build log and layer-cache summary
 - `boost npm ci` — dependency summary, local package cache, retry-safe output
-- `boost pytest` — per-test pass/fail/duration stored locally, quiet output on green runs
-- `boost gh run view --log` — CI log stream condensed to top failures plus summary
+- `boost pytest` — quiet output on green runs, useful failures when tests break
+- `boost gh run view --log` — CI logs condensed to top failures plus summary
 
 ## Update
 
@@ -137,9 +137,9 @@ See the [full documentation](https://jfrog.github.io/boost) for commands, config
 
 ## Security & Privacy
 
-- **Local-first.** Command history and raw OTel traces stay on your machine.
-- **Only metadata leaves.** Exported spans carry timing, exit code, and cache stats — never raw logs, file contents, or env values. Secrets matching patterns like `*_TOKEN`, `*_SECRET`, `AWS_*`, `DATABASE_URL` are redacted before write or export.
-- **Open protocol, signed binaries.** OpenTelemetry-native; point `BOOST_OTEL_ENDPOINT` at your own backend. Binaries ship signed via GitHub Releases.
+- **Local-first.** Command history and raw logs stay on your machine.
+- **Only metadata leaves.** When Boost sends usage data, it goes only to JFrog to help improve the product. Exported metadata includes timing, exit code, and cache stats — never raw logs, file contents, or env values. Secrets matching patterns like `*_TOKEN`, `*_SECRET`, `AWS_*`, `DATABASE_URL` are redacted before write or export.
+- **Open protocol, signed binaries.** OpenTelemetry-native. Binaries ship signed via GitHub Releases.
 
 Full policy, supported versions, and how to report a vulnerability: see [SECURITY.md](./SECURITY.md).
 
