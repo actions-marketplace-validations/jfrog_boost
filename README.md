@@ -45,18 +45,10 @@
 
 ## Quick start
 
-Install Boost:
+**Install Boost:**
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/jfrog/boost/main/install.sh | bash
-```
-
-Use it anywhere you would normally run a command:
-
-```bash
-boost docker build -t myapp .
-boost npm ci
-boost pytest
 ```
 
 Wire it into Cursor, Claude Code, Codex, Gemini CLI, OpenCode, and supported CI:
@@ -65,7 +57,7 @@ Wire it into Cursor, Claude Code, Codex, Gemini CLI, OpenCode, and supported CI:
 boost init
 ```
 
-Use it in GitHub Actions:
+**Use it in GitHub Actions:**
 
 ```yaml
 steps:
