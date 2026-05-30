@@ -37,11 +37,11 @@
 
 ---
 
-**Boost** wraps the commands your agents and CI already run, then turns noisy logs into compact, structured context. Agents keep the signal: errors, timings, changed counts, cache hits, and next useful clues. Repeated package logs, progress bars, and CI noise stay out of the prompt.
+**Boost** wraps the commands your agents and CI already run, save tokens, turns noisy logs into compact, structured context. Agents keep the signal: errors, timings, changed counts, cache hits, and next useful clues. Repeated package logs, progress bars, and CI noise stay out of the prompt.
 
-- **60-90% fewer log tokens** before output reaches the agent.
-- **Smarter command context** that keeps failures and summaries instead of raw log walls.
-- **One wrapper for local agents and CI**: terminal commands, editor hooks, and GitHub Actions.
+your **terminal** — prefix any command with boost
+your **coding agent** — boost init wires up Cursor, Claude Code, Codex, Gemini CLI, and more
+your **CI** — one line: uses: jfrog/boost@v0
 
 ## Quick start
 
@@ -51,7 +51,7 @@
 curl -fsSL https://raw.githubusercontent.com/jfrog/boost/main/install.sh | bash
 ```
 
-Wire it into Cursor, Claude Code, Codex, Gemini CLI, OpenCode, and supported CI:
+**Wire it into Cursor, Claude Code, Codex, Gemini CLI, OpenCode, and supported CI:**
 
 ```bash
 boost init
