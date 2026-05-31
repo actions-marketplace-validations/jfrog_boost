@@ -18,11 +18,11 @@
 
 <p align="center">
   <a href="https://jfrog.github.io/boost/"><img src="https://img.shields.io/badge/website-jfrog.github.io%2Fboost-36a13b?logo=googlechrome&logoColor=white" alt="Website"></a>
-  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/v/release/jfrog/boost?color=36a13b" alt="Release"></a>
+  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/badge/release-v0.7.5-36a13b" alt="Release"></a>
   <a href="https://go.dev/"><img src="https://img.shields.io/badge/go-1.25-00ADD8?logo=go&logoColor=white" alt="Go 1.25"></a>
   <img src="https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20windows-lightgrey" alt="Platforms">
-  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/downloads/jfrog/boost/total?color=6f42c1" alt="Downloads"></a>
-  <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/github/stars/jfrog/boost?style=flat&color=yellow" alt="Stars"></a>
+  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/badge/downloads-GitHub%20releases-6f42c1" alt="Downloads"></a>
+  <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/badge/stars-GitHub-yellow" alt="Stars"></a>
 </p>
 
 <p align="center">
