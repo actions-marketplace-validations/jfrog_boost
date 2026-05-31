@@ -21,11 +21,8 @@
   <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/badge/release-v0.7.5-36a13b" alt="Release"></a>
   <a href="https://go.dev/"><img src="https://img.shields.io/badge/go-1.25-00ADD8?logo=go&logoColor=white" alt="Go 1.25"></a>
   <img src="https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20windows-lightgrey" alt="Platforms">
-  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/badge/downloads-GitHub%20releases-6f42c1" alt="Downloads"></a>
-  <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/badge/stars-GitHub-yellow" alt="Stars"></a>
-</p>
-
-<p align="center">
+  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/badge/downloads-94k%2B-6f42c1" alt="Downloads: 94k+"></a>
+  <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/badge/stars-234-yellow" alt="Stars: 234"></a><br>
   <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="Agent-native">
   <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
 </p>
