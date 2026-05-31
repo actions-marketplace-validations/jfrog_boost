@@ -28,7 +28,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="Agent-native">
   <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-proprietary%20(beta)-blue" alt="License: proprietary (beta)"></a>
 </p>
 
 <p align="center">
