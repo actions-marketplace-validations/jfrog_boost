@@ -39,9 +39,9 @@
 
 <p align="center">
   <picture>
-    <source srcset=".github/assets/boost-mascot-dark.svg" media="(prefers-color-scheme: dark)">
-    <source srcset=".github/assets/boost-mascot-light.svg" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-mascot-light.svg" alt="Frogi, the Boost mascot" width="900">
+    <source srcset=".github/assets/boost-mascot-dark.png" media="(prefers-color-scheme: dark)">
+    <source srcset=".github/assets/boost-mascot-light.png" media="(prefers-color-scheme: light)">
+    <img src=".github/assets/boost-mascot-light.png" alt="Frogi, the Boost mascot" width="900">
   </picture>
 </p>
 
