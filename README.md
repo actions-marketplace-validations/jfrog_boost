@@ -45,10 +45,9 @@
   </picture>
 </p>
 
-**Boost** wraps the commands your agents already run and turns noisy logs into compact, structured context — saving tokens with every tool call. Agents keep the signal: errors, timings, changed counts, cache hits, and next useful clues. Repeated package logs, progress bars, and build noise stay out of the prompt.
+**Boost** wraps the commands your agents already run, turning noisy logs into compact, structured context that keeps the signal — errors, timings, changed counts, cache hits — while cutting the noise.
 
-- your **terminal** — prefix any command with `boost`
-- your **coding agent** — `boost init` wires up Cursor, Claude Code, Codex, Gemini CLI, and more
+Boost never trades quality for savings. It trims only what's safe to drop, so agent output stays just as sharp. Our [Terminal-Bench 2.0 benchmark](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) shows it: identical task pass rate, ~12% lower cost — Boost keeps agents optimized without ever breaking their stride.
 
 ## Quick start
 
