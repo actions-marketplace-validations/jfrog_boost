@@ -82,6 +82,20 @@ $ boost npm ci
 
 The agent sees the useful summary, not the scrollback. On failures, Boost keeps the failing test, compiler error, or stack frame that matters.
 
+## See your savings
+
+After wrapping commands, check how many tokens Boost kept out of your context window:
+
+```bash
+boost report
+```
+
+Open an interactive breakdown in your browser:
+
+```bash
+boost report -w
+```
+
 ## What it wraps
 
 - **Agents:** Cursor, Claude Code, GitHub Copilot, Codex CLI, Gemini CLI, OpenCode, Windsurf, Cline.
