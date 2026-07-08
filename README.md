@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-  <strong>Make your agents smarter and faster</strong>
+  <strong>Save tokens. Maximize context.</strong>
 </p>
 
 <p align="center">
-  <sub>Smart token savings for coding agents, shell commands, and CI.</sub>
+  <sub>Smart token savings for coding agents and shell commands.</sub>
 </p>
 
 <p align="center">
@@ -41,15 +41,13 @@
   <picture>
     <source srcset=".github/assets/boost-mascot-dark.png" media="(prefers-color-scheme: dark)">
     <source srcset=".github/assets/boost-mascot-light.png" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-mascot-light.png" alt="Frogi, the Boost mascot" width="900">
+    <img src=".github/assets/boost-mascot-light.png" alt="Frogi, the Boost mascot" width="180">
   </picture>
 </p>
 
-**Boost** wraps the commands your agents and CI already run, save tokens, turns noisy logs into compact, structured context. Agents keep the signal: errors, timings, changed counts, cache hits, and next useful clues. Repeated package logs, progress bars, and CI noise stay out of the prompt.
+**Boost** wraps the commands your agents already run, turning noisy logs into compact, structured context that keeps the signal — errors, timings, changed counts, cache hits — while cutting the noise.
 
-your **terminal** — prefix any command with boost
-your **coding agent** — boost init wires up Cursor, Claude Code, Codex, Gemini CLI, and more
-your **CI** — one line: uses: jfrog/boost@v0
+Boost never trades quality for savings. It trims only what's safe to drop, so agent output stays just as sharp. Our [Terminal-Bench 2.0 benchmark](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) shows it: identical task pass rate, ~12% lower cost — Boost keeps agents optimized without ever breaking their stride.
 
 ## Quick start
 
@@ -59,18 +57,10 @@ your **CI** — one line: uses: jfrog/boost@v0
 curl -fsSL https://raw.githubusercontent.com/jfrog/boost/main/install.sh | bash
 ```
 
-**Wire it into Cursor, Claude Code, Codex, Gemini CLI, OpenCode, and supported CI:**
+**Wire it into Cursor, Claude Code, Codex, Gemini CLI, and OpenCode:**
 
 ```bash
 boost init
-```
-
-**Use it in GitHub Actions:**
-
-```yaml
-steps:
-  - uses: jfrog/boost@v0
-  - uses: actions/checkout@v4
 ```
 
 ## Smart token savings
@@ -89,12 +79,25 @@ $ boost npm ci
 [OK] npm ci · 1,285 packages restored from boost cache in 2.4s · 0 vulnerabilities
 ```
 
-The agent sees the useful summary, not the scrollback. On failures, Boost keeps the failing test, compiler error, stack frame, or CI step that matters.
+The agent sees the useful summary, not the scrollback. On failures, Boost keeps the failing test, compiler error, or stack frame that matters.
+
+## See your savings
+
+After wrapping commands, check how many tokens Boost kept out of your context window:
+
+```bash
+boost report
+```
+
+Open an interactive breakdown in your browser:
+
+```bash
+boost report -w
+```
 
 ## What it wraps
 
 - **Agents:** Cursor, Claude Code, GitHub Copilot, Codex CLI, Gemini CLI, OpenCode, Windsurf, Cline.
-- **CI:** GitHub Actions now; GitLab CI, Jenkins, CircleCI, and Azure Pipelines are coming soon.
 - **Commands:** Docker, npm, pytest, Git, GitHub CLI, and other shell commands pass through the same wrapper.
 
 ## Usage examples
@@ -102,7 +105,6 @@ The agent sees the useful summary, not the scrollback. On failures, Boost keeps 
 - `boost docker build ...` — compressed build log and layer-cache summary
 - `boost npm ci` — dependency summary, local package cache, retry-safe output
 - `boost pytest` — quiet output on green runs, useful failures when tests break
-- `boost gh run view --log` — CI logs condensed to top failures plus summary
 
 ## Update
 
@@ -112,7 +114,7 @@ boost update
 
 ## Documentation
 
-See the [full documentation](https://jfrog.github.io/boost) for commands, configuration, OpenTelemetry export, and CI recipes.
+See the [full documentation](https://jfrog.github.io/boost) for commands, configuration, and OpenTelemetry export.
 
 ## Security & Privacy
 
