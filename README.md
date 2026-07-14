@@ -49,6 +49,10 @@
 
 Boost never trades quality for savings. It trims only what's safe to drop, so agent output stays just as sharp. Our [Terminal-Bench 2.0 benchmark](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) shows it: identical task pass rate, ~12% lower cost — Boost keeps agents optimized without ever breaking their stride.
 
+<p align="center">
+  <img src=".github/assets/boost-how-to-use.gif" alt="Boost how to use: install, run a task, boost report" width="768">
+</p>
+
 ## Quick start
 
 **Install Boost:**
