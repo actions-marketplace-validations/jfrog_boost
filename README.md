@@ -53,7 +53,7 @@ Boost never trades quality for savings. It trims only what's safe to drop, so ag
   <picture>
     <source srcset=".github/assets/boost-how-to-use-dark.gif" media="(prefers-color-scheme: dark)">
     <source srcset=".github/assets/boost-how-to-use-light.gif" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-how-to-use-light.gif" alt="Boost how to use: install, run a task, boost report" width="768">
+    <img src=".github/assets/boost-how-to-use-light.gif" alt="Boost how to use: install, boost init, run a task, boost report" width="768">
   </picture>
 </p>
 
