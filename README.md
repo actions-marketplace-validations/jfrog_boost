@@ -97,9 +97,10 @@ The agent sees the useful summary, not the scrollback. On failures, Boost keeps 
 | Full-context and RAG compression | × | × | ✓ | × |
 | Assistant reply compression | × | × | × | ✓ |
 | Command output recovery | ✓ | ✓ | ✓ | × |
+| Native approval sees original executable | ✓ | × | — | — |
 | Versioned retrieval feedback | ✓ | × | × | × |
 | Auto-disable repeatedly retrieved filters | ✓ | × | × | × |
-| Published task success and cost A/B | ✓ | × | × | × |
+| End-to-end agent task + cost A/B | ✓ | × | × | × |
 
 ## See your savings
 
