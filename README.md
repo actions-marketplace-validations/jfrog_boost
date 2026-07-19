@@ -89,6 +89,18 @@ $ boost npm ci
 
 The agent sees the useful summary, not the scrollback. On failures, Boost keeps the failing test, compiler error, or stack frame that matters.
 
+## [How Boost is different](https://boost.jfrog.com/docs/en/why-boost/)
+
+| Capability | Boost | RTK | Headroom | Caveman |
+| --- | :---: | :---: | :---: | :---: |
+| Command output compression | ✓ | ✓ | ✓ | × |
+| Full-context and RAG compression | × | × | ✓ | × |
+| Assistant reply compression | × | × | × | ✓ |
+| Command output recovery | ✓ | ✓ | ✓ | × |
+| Versioned retrieval feedback | ✓ | × | × | × |
+| Auto-disable repeatedly retrieved filters | ✓ | × | × | × |
+| Published task success and cost A/B | ✓ | × | × | × |
+
 ## See your savings
 
 After wrapping commands, check how many tokens Boost kept out of your context window:
