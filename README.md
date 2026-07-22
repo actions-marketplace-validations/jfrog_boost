@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://jfrog.github.io/boost/">
+  <a href="https://boost.jfrog.com/">
     <picture>
       <source srcset=".github/assets/boost-logo-dark.png" media="(prefers-color-scheme: dark)">
       <source srcset=".github/assets/boost-logo-light.png" media="(prefers-color-scheme: light)">
@@ -17,12 +17,12 @@
 </p>
 
 <p align="center">
-  <a href="https://jfrog.github.io/boost/"><img src="https://img.shields.io/badge/website-jfrog.github.io%2Fboost-36a13b?logo=googlechrome&logoColor=white" alt="Website"></a>
-  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/badge/release-v0.8.6-36a13b" alt="Release"></a>
+  <a href="https://boost.jfrog.com/"><img src="https://img.shields.io/badge/website-boost.jfrog.com-36a13b?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZmlsbD0iIzlCRTE1RCIgZD0iTTkuMiAxLjUgMy4xIDkuMmgzLjlsLTEuMSA1LjMgNy4xLTguMkg5LjV6Ii8%2BPC9zdmc%2B" alt="Website"></a>
+  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/v/release/jfrog/boost?color=36a13b" alt="Release"></a>
   <a href="https://go.dev/"><img src="https://img.shields.io/badge/go-1.25-00ADD8?logo=go&logoColor=white" alt="Go 1.25"></a>
   <img src="https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20windows-lightgrey" alt="Platforms">
-  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/badge/downloads-94k%2B-6f42c1" alt="Downloads: 94k+"></a>
-  <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/badge/stars-258-yellow" alt="Stars: 258"></a><br>
+  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/downloads/jfrog/boost/total?color=6f42c1" alt="Downloads"></a>
+  <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/github/stars/jfrog/boost?style=flat&color=yellow" alt="Stars"></a><br>
   <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="Agent-native">
   <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
 </p>
@@ -59,17 +59,34 @@ Boost never trades quality for savings. It trims only what's safe to drop, so ag
 
 ## Quick start
 
-**Install Boost:**
+**Install Boost**
+
+macOS / Linux / Windows WSL:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/jfrog/boost/main/install.sh | bash
+curl -fsSL https://boost.jfrog.com/install.sh | bash
 ```
 
-**Wire it into Cursor, Claude Code, Codex, Gemini CLI, and OpenCode:**
+Windows PowerShell:
+
+```powershell
+irm https://boost.jfrog.com/install.ps1 | iex
+```
+
+**Wire it into Cursor, Claude Code, GitHub Copilot, and Codex CLI:**
 
 ```bash
 boost init
 ```
+
+For AI coding agents installing Boost on a user's machine, follow **[AGENT-INSTALL.md](./AGENT-INSTALL.md)**.
+
+## When to use Boost
+
+- **Long coding-agent sessions** — Keep context lean across dozens of shell commands so agents spend tokens on the task, not scrollback.
+- **Noisy test, build, and debug loops** — Compress `npm test`, `pytest`, `go test`, `docker build`, linters, and logs while keeping failures and summaries.
+- **CI pipelines** — Shorter, easier-to-scan job logs with timing and cache signal for GitHub Actions and other runners.
+- **Custom or internal tools** — Add TOML filters for your own CLIs so the same compression loop covers the tools your agents actually run.
 
 ## Smart token savings
 
@@ -104,24 +121,25 @@ The agent sees the useful summary, not the scrollback. On failures, Boost keeps 
 
 ## See your savings
 
-After wrapping commands, check how many tokens Boost kept out of your context window:
+After wrapping commands, open the interactive web report:
 
 ```bash
 boost report
 ```
 
-Open an interactive breakdown in your browser:
+For a terminal narrative summary:
 
 ```bash
-boost report -w
+boost report -t
+# or: boost report --tui
 ```
 
 ## What it wraps
 
-- **Agents:** Cursor, Claude Code, GitHub Copilot, Codex CLI, Gemini CLI, OpenCode, Windsurf, Cline.
+- **Agents:** Cursor, Claude Code, GitHub Copilot, Codex CLI.
 - **Commands:** Docker, npm, pytest, Git, GitHub CLI, and other shell commands pass through the same wrapper.
 
-## Usage examples
+## How your agents are using Boost
 
 - `boost docker build ...` — compressed build log and layer-cache summary
 - `boost npm ci` — dependency summary, local package cache, retry-safe output
@@ -135,7 +153,7 @@ boost update
 
 ## Documentation
 
-See the [full documentation](https://jfrog.github.io/boost) for commands, configuration, and OpenTelemetry export.
+See the [full documentation](https://boost.jfrog.com/docs/en/overview/) for commands, configuration, and OpenTelemetry export.
 
 ## Security & Privacy
 
