@@ -73,11 +73,13 @@ Windows PowerShell:
 irm https://boost.jfrog.com/install.ps1 | iex
 ```
 
-**Wire it into Cursor, Claude Code, Codex, Gemini CLI, and more:**
+**Wire it into Cursor, Claude Code, GitHub Copilot, and Codex CLI:**
 
 ```bash
 boost init
 ```
+
+For AI coding agents installing Boost on a user's machine, follow **[AGENT-INSTALL.md](./AGENT-INSTALL.md)**.
 
 ## When to use Boost
 
@@ -104,7 +106,7 @@ $ boost npm ci
 
 The agent sees the useful summary, not the scrollback. On failures, Boost keeps the failing test, compiler error, or stack frame that matters.
 
-## [How Boost is different](https://boost.jfrog.com/docs/en/overview/en/why-boost/)
+## [How Boost is different](https://boost.jfrog.com/docs/en/why-boost/)
 
 | Capability | Boost | RTK | Headroom | Caveman |
 | --- | :---: | :---: | :---: | :---: |
@@ -119,24 +121,25 @@ The agent sees the useful summary, not the scrollback. On failures, Boost keeps 
 
 ## See your savings
 
-After wrapping commands, check how many tokens Boost kept out of your context window:
+After wrapping commands, open the interactive web report:
 
 ```bash
 boost report
 ```
 
-Open an interactive breakdown in your browser:
+For a terminal narrative summary:
 
 ```bash
-boost report -w
+boost report -t
+# or: boost report --tui
 ```
 
 ## What it wraps
 
-- **Agents:** Cursor, Claude Code, GitHub Copilot, Codex CLI, Gemini CLI, Windsurf, Cline.
+- **Agents:** Cursor, Claude Code, GitHub Copilot, Codex CLI.
 - **Commands:** Docker, npm, pytest, Git, GitHub CLI, and other shell commands pass through the same wrapper.
 
-## Usage examples
+## How your agents are using Boost
 
 - `boost docker build ...` — compressed build log and layer-cache summary
 - `boost npm ci` — dependency summary, local package cache, retry-safe output
@@ -150,7 +153,7 @@ boost update
 
 ## Documentation
 
-See the [full documentation](https://boost.jfrog.com/docs/) for commands, configuration, and OpenTelemetry export.
+See the [full documentation](https://boost.jfrog.com/docs/en/overview/) for commands, configuration, and OpenTelemetry export.
 
 ## Security & Privacy
 
