@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Save tokens. Maximize context.</strong>
+  <strong>Save tokens. Sharpen agents.</strong>
 </p>
 
 <p align="center">

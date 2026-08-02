@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>टोकन बचाएँ। कॉन्टेक्स्ट का अधिकतम उपयोग करें।</strong>
+  <strong>टोकन बचाएँ। एजेंट्स को ज़्यादा सटीक बनाएँ।</strong>
 </p>
 
 <p align="center">

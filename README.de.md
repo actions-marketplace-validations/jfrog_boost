@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>Tokens sparen. Kontext maximieren.</strong>
+  <strong>Tokens sparen. Agents präziser machen.</strong>
 </p>
 
 <p align="center">

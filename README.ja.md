@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <strong>トークンを節約。コンテキストを最大化。</strong>
+  <strong>トークンを節約。エージェントの精度を高める。</strong>
 </p>
 
 <p align="center">

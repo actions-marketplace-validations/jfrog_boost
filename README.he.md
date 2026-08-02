@@ -9,7 +9,7 @@
 </p>
 
 <p align="center" dir="rtl">
-  <strong>חסכו בטוקנים. הפיקו את המרב מההקשר.</strong>
+  <strong>חסכו בטוקנים. שפרו את דיוק הסוכנים.</strong>
 </p>
 
 <p align="center" dir="rtl">
