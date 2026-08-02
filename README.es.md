@@ -9,21 +9,21 @@
 </p>
 
 <p align="center">
-  <strong>Ahorra tokens. Maximiza el contexto.</strong>
+  <strong>Ahorra tokens. Aprovecha al máximo el contexto.</strong>
 </p>
 
 <p align="center">
-  <sub>Ahorro inteligente de tokens para agentes de codificación y comandos de shell.</sub>
+  <sub>Ahorro inteligente de tokens para agentes de programación y comandos de shell.</sub>
 </p>
 
 <p align="center">
-  <a href="https://boost.jfrog.com/"><img src="https://img.shields.io/badge/website-boost.jfrog.com-36a13b?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZmlsbD0iIzlCRTE1RCIgZD0iTTkuMiAxLjUgMy4xIDkuMmgzLjlsLTEuMSA1LjMgNy4xLTguMkg5LjV6Ii8%2BPC9zdmc%2B" alt="Website"></a>
-  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/v/release/jfrog/boost?color=36a13b" alt="Release"></a>
+  <a href="https://boost.jfrog.com/"><img src="https://img.shields.io/badge/website-boost.jfrog.com-36a13b?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZmlsbD0iIzlCRTE1RCIgZD0iTTkuMiAxLjUgMy4xIDkuMmgzLjlsLTEuMSA1LjMgNy4xLTguMkg5LjV6Ii8%2BPC9zdmc%2B" alt="Sitio web"></a>
+  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/v/release/jfrog/boost?color=36a13b" alt="Versión"></a>
   <a href="https://go.dev/"><img src="https://img.shields.io/badge/go-1.25-00ADD8?logo=go&logoColor=white" alt="Go 1.25"></a>
-  <img src="https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20windows-lightgrey" alt="Platforms">
-  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/downloads/jfrog/boost/total?color=6f42c1" alt="Downloads"></a>
-  <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/github/stars/jfrog/boost?style=flat&color=yellow" alt="Stars"></a><br>
-  <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="Agent-native">
+  <img src="https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20windows-lightgrey" alt="Plataformas">
+  <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/downloads/jfrog/boost/total?color=6f42c1" alt="Descargas"></a>
+  <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/github/stars/jfrog/boost?style=flat&color=yellow" alt="Estrellas"></a><br>
+  <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="Nativo para agentes">
   <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
 </p>
 
@@ -44,26 +44,26 @@
 ---
 
 <p align="center">
-  <strong>Frogi, nuestra mascota, aparece cuando ejecutas solo <code>boost</code>.</strong>
+  <strong>Frogi, nuestra mascota, aparece cuando ejecutas únicamente <code>boost</code>.</strong>
 </p>
 
 <p align="center">
   <picture>
     <source srcset=".github/assets/boost-mascot-dark.png" media="(prefers-color-scheme: dark)">
     <source srcset=".github/assets/boost-mascot-light.png" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-mascot-light.png" alt="Frogi, the Boost mascot" width="180">
+    <img src=".github/assets/boost-mascot-light.png" alt="Frogi, la mascota de Boost" width="180">
   </picture>
 </p>
 
-**Boost** envuelve los comandos que tus agentes ya ejecutan, convirtiendo logs ruidosos en contexto compacto y estructurado que conserva la señal — errores, tiempos, conteos de cambios, aciertos de caché — mientras reduce el ruido.
+**Boost** actúa como una capa sobre los comandos que tus agentes ya ejecutan y convierte registros con mucho ruido en un contexto compacto y estructurado que conserva la señal —errores, tiempos, recuentos de cambios y aciertos de caché— mientras reduce el ruido.
 
-Boost nunca sacrifica calidad por ahorro. Solo recorta lo que es seguro eliminar, para que la salida del agente siga siendo igual de precisa. Nuestro [benchmark Terminal-Bench 2.0](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) lo demuestra: la misma tasa de éxito en las tareas, ~12 % menos de coste — Boost mantiene a los agentes optimizados sin frenar su ritmo.
+Boost nunca sacrifica calidad para ahorrar. Solo elimina lo que puede descartarse sin riesgo, por lo que la salida del agente conserva la misma precisión. Nuestra [evaluación comparativa con Terminal-Bench 2.0](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) lo demuestra: la misma tasa de éxito en las tareas con un coste aproximadamente un 12 % inferior. Boost mantiene optimizados a los agentes sin interrumpir nunca su ritmo.
 
 <p align="center">
   <picture>
     <source srcset=".github/assets/boost-how-to-use-dark.gif" media="(prefers-color-scheme: dark)">
     <source srcset=".github/assets/boost-how-to-use-light.gif" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-how-to-use-light.gif" alt="Boost how to use: install, boost init, run a task, boost report" width="768">
+    <img src=".github/assets/boost-how-to-use-light.gif" alt="Cómo usar Boost: instalar, boost init, ejecutar una tarea, boost report" width="768">
   </picture>
 </p>
 
@@ -83,24 +83,24 @@ Windows PowerShell:
 irm https://boost.jfrog.com/install.ps1 | iex
 ```
 
-**Conéctalo a Cursor, Claude Code, GitHub Copilot y Codex CLI:**
+**Intégralo en Cursor, Claude Code, GitHub Copilot y Codex CLI:**
 
 ```bash
 boost init
 ```
 
-Para agentes de codificación con IA que instalen Boost en la máquina de un usuario, sigue **[AGENT-INSTALL.md](./AGENT-INSTALL.md)**.
+Los agentes de programación con IA que instalen Boost en el equipo de un usuario deben seguir **[AGENT-INSTALL.md](./AGENT-INSTALL.md)**.
 
 ## Cuándo usar Boost
 
-- **Sesiones largas de agentes de codificación** — Mantén el contexto ágil a lo largo de docenas de comandos de shell para que los agentes gasten tokens en la tarea, no en el scrollback.
-- **Bucles ruidosos de test, build y debug** — Comprime `npm test`, `pytest`, `go test`, `docker build`, linters y logs, conservando fallos y resúmenes.
-- **Pipelines de CI** — Logs de jobs más cortos y fáciles de escanear, con señales de tiempo y de caché para GitHub Actions y otros runners.
-- **Herramientas personalizadas o internas** — Añade filtros TOML para tus propios CLIs y así el mismo bucle de compresión cubre las herramientas que tus agentes realmente usan.
+- **Sesiones largas con agentes de programación** — Mantén un contexto compacto durante docenas de comandos de shell para que los agentes dediquen los tokens a la tarea y no al historial de la terminal.
+- **Ciclos ruidosos de pruebas, compilación y depuración** — Comprime `npm test`, `pytest`, `go test`, `docker build`, linters y registros, pero conserva los fallos y los resúmenes.
+- **Pipelines de CI** — Registros de trabajos más breves y fáciles de revisar, con información sobre tiempos y caché para GitHub Actions y otros ejecutores.
+- **Herramientas personalizadas o internas** — Añade filtros TOML para tus propias CLI, de modo que el mismo ciclo de compresión cubra las herramientas que tus agentes utilizan realmente.
 
 ## Ahorro inteligente de tokens
 
-Boost no se limita a truncar la salida. Aplica filtros conscientes del comando que preservan lo que los agentes necesitan para razonar sobre el resultado.
+Boost no se limita a truncar la salida. Aplica filtros que tienen en cuenta el comando y conservan lo que los agentes necesitan para razonar sobre el resultado.
 
 ```bash
 # Without Boost: ~9,800 tokens of install noise
@@ -114,24 +114,24 @@ $ boost npm ci
 [OK] npm ci · 1,285 packages restored from boost cache in 2.4s · 0 vulnerabilities
 ```
 
-El agente ve el resumen útil, no el scrollback. En caso de fallo, Boost conserva el test fallido, el error del compilador o el frame de stack que importa.
+El agente ve el resumen útil, no todo el historial de la terminal. Cuando se produce un fallo, Boost conserva la prueba fallida, el error del compilador o el marco de pila relevante.
 
-## [Cómo se diferencia Boost](https://boost.jfrog.com/docs/en/why-boost/)
+## [En qué se diferencia Boost](https://boost.jfrog.com/docs/en/why-boost/)
 
 | Capacidad | Boost | RTK | Headroom | Caveman |
 | --- | :---: | :---: | :---: | :---: |
-| Compresión de salida de comandos | ✓ | ✓ | ✓ | × |
-| Compresión de contexto completo y RAG | × | × | ✓ | × |
-| Compresión de respuestas del asistente | × | × | × | ✓ |
-| Recuperación de salida de comandos | ✓ | ✓ | ✓ | × |
-| La aprobación nativa ve el ejecutable original | ✓ | × | — | — |
-| Feedback de recuperación versionado | ✓ | × | × | × |
-| Desactivar automáticamente filtros recuperados de forma repetida | ✓ | × | × | × |
-| A/B de tarea de agente + coste de extremo a extremo | ✓ | × | × | × |
+| Compresión de la salida de comandos | ✓ | ✓ | ✓ | × |
+| Compresión del contexto completo y compresión RAG | × | × | ✓ | × |
+| Compresión de las respuestas del asistente | × | × | × | ✓ |
+| Recuperación de la salida de comandos | ✓ | ✓ | ✓ | × |
+| El sistema de aprobación nativo recibe el ejecutable original | ✓ | × | — | — |
+| Información versionada sobre las recuperaciones | ✓ | × | × | × |
+| Desactivación automática de filtros cuyo contenido se recupera repetidamente | ✓ | × | × | × |
+| Pruebas A/B integrales de tareas y costes de agentes | ✓ | × | × | × |
 
 ## Consulta tus ahorros
 
-Tras envolver comandos, abre el informe web interactivo:
+Una vez que hayas ejecutado comandos a través de Boost, abre el informe web interactivo:
 
 ```bash
 boost report
@@ -144,16 +144,16 @@ boost report -t
 # or: boost report --tui
 ```
 
-## Qué envuelve
+## Qué cubre
 
 - **Agentes:** Cursor, Claude Code, GitHub Copilot, Codex CLI.
-- **Comandos:** Docker, npm, pytest, Git, GitHub CLI y otros comandos de shell pasan por el mismo wrapper.
+- **Comandos:** Docker, npm, pytest, Git, GitHub CLI y otros comandos de shell se ejecutan a través de la misma capa de Boost.
 
 ## Cómo usan Boost tus agentes
 
-- `boost docker build ...` — log de build comprimido y resumen de caché de capas
-- `boost npm ci` — resumen de dependencias, caché local de paquetes, salida segura para reintentos
-- `boost pytest` — salida silenciosa en ejecuciones en verde, fallos útiles cuando fallan los tests
+- `boost docker build ...` — registro de compilación comprimido y resumen de la caché de capas
+- `boost npm ci` — resumen de dependencias, caché local de paquetes, salida que permite reintentos seguros
+- `boost pytest` — salida mínima cuando las pruebas terminan correctamente y detalles útiles cuando fallan
 
 ## Actualizar
 
@@ -163,15 +163,15 @@ boost update
 
 ## Documentación
 
-Consulta la [documentación completa](https://boost.jfrog.com/docs/en/overview/) para comandos, configuración y exportación OpenTelemetry.
+Consulta la [documentación completa](https://boost.jfrog.com/docs/en/overview/) para obtener información sobre los comandos, la configuración y la exportación mediante OpenTelemetry.
 
 ## Seguridad y privacidad
 
-- **Local primero.** El historial de comandos y los logs en bruto permanecen en tu máquina.
-- **Solo salen metadatos.** Cuando Boost envía datos de uso, van únicamente a JFrog para ayudar a mejorar el producto. Los metadatos exportados incluyen tiempos, código de salida y estadísticas de caché; nunca logs en bruto, contenido de archivos ni valores de entorno. Los secretos que coinciden con patrones como `*_TOKEN`, `*_SECRET`, `AWS_*`, `DATABASE_URL` se redactan antes de escribir o exportar.
-- **Protocolo abierto, binarios firmados.** Nativo de OpenTelemetry. Los binarios se publican firmados a través de GitHub Releases.
+- **Prioridad al entorno local.** El historial de comandos y los registros sin procesar permanecen en tu equipo.
+- **Solo salen metadatos.** Cuando Boost envía datos de uso, van únicamente a JFrog para ayudar a mejorar el producto. Los metadatos exportados incluyen información sobre tiempos, el código de salida y estadísticas de caché, pero nunca registros sin procesar, contenido de archivos ni valores de variables de entorno. Los secretos que coinciden con patrones como `*_TOKEN`, `*_SECRET`, `AWS_*`, `DATABASE_URL` se ocultan antes de almacenarlos o exportarlos.
+- **Protocolo abierto, binarios firmados.** Compatible de forma nativa con OpenTelemetry. Los binarios se distribuyen firmados a través de GitHub Releases.
 
-Política completa, versiones compatibles y cómo informar de una vulnerabilidad: consulta [SECURITY.md](./SECURITY.md).
+Consulta [SECURITY.md](./SECURITY.md) para conocer la política completa, las versiones compatibles y cómo informar de una vulnerabilidad.
 
 ## Licencia
 
@@ -179,4 +179,4 @@ Copyright © 2026 JFrog Ltd. Todos los derechos reservados. Consulta [LICENSE](L
 
 ---
 
-*Dedicado a la memoria de Dima Gershovich — un ingeniero brillante, un músico talentoso y un querido amigo.* [Lee la historia de Dima](docs/memorial/MEMORIAL.md)
+*Dedicado a la memoria de Dima Gershovich, un ingeniero brillante, un músico de gran talento y un amigo muy querido.* [Lee la historia de Dima](docs/memorial/MEMORIAL.md)
