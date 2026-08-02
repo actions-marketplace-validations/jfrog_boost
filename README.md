@@ -31,6 +31,16 @@
   <sub>Sponsored by <a href="https://jfrog.com"><strong>JFrog</strong></a></sub>
 </p>
 
+<p align="center">
+  <strong>English</strong> ·
+  <a href="README.es.md">Español</a> ·
+  <a href="README.fr.md">Français</a> ·
+  <a href="README.de.md">Deutsch</a> ·
+  <a href="README.ja.md">日本語</a> ·
+  <a href="README.hi.md">हिन्दी</a> ·
+  <a href="README.he.md">עברית</a>
+</p>
+
 ---
 
 <p align="center">
