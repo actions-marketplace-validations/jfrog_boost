@@ -74,6 +74,22 @@ Redaction runs at every point where data is captured, stored, or emitted:
 - **Fail-closed at the export boundary.** The OTel exporter wraps every span in `sanitizedSpan`; an un-sanitized span cannot be reached from a normal export code path.
 - **Zero-copy fast path.** When no pattern matches, the input buffer is returned unmodified — performance does not create an incentive to disable redaction.
 
+## Security Scanning
+
+Boost's source repository is scanned by [Frogbot](https://github.com/jfrog/frogbot) — JFrog's Git security bot — on every push to `main`, which are the same commits release binaries are built from. Frogbot runs against **JFrog Xray** with **JFrog Advanced Security** enabled, and repeats the dependency scan for both `linux/amd64` and `linux/arm64` resolution.
+
+| Scan | Coverage |
+| --- | --- |
+| **Software Composition Analysis (SCA)** | Go modules and every npm workspace in the repository, resolved to a full dependency tree and matched against JFrog's vulnerability database |
+| **Contextual Analysis** | Determines whether a reported CVE is reachable from Boost's code before it is treated as an actionable finding |
+| **Malicious package detection** | Flags dependencies identified as malicious, not merely vulnerable |
+| **Secrets detection** | Scans tracked files for leaked credentials, tokens, and keys |
+| **Static Application Security Testing (SAST)** | Boost's own Go and TypeScript sources |
+| **Infrastructure as Code (IaC)** | CI workflows and deployment definitions |
+| **SBOM generation** | A component inventory is produced per build target on every scan |
+
+Results are uploaded as GitHub code-scanning alerts, and Frogbot opens fix pull requests for upgradable vulnerable dependencies. Security findings fail the scan job, so they are triaged rather than silently accumulated. Issues affecting released binaries follow the disclosure process described above.
+
 ## Supply Chain
 
 - **Signed releases.** Binaries are published on [GitHub Releases](https://github.com/jfrog/boost/releases) with checksums.
@@ -99,4 +115,4 @@ The following are outside the scope of this policy:
 
 ---
 
-_Last updated: 2026-04-21_
+_Last updated: 2026-08-11_

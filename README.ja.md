@@ -24,8 +24,7 @@
   <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/downloads/jfrog/boost/total?color=6f42c1" alt="ダウンロード数"></a>
   <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/github/stars/jfrog/boost?style=flat&color=yellow" alt="GitHub スター数"></a><br>
   <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="エージェントネイティブ">
-  <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
-</p>
+  <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry"></p>
 
 <p align="center">
   <sub>スポンサー: <a href="https://jfrog.com"><strong>JFrog</strong></a></sub>
@@ -39,6 +38,16 @@
   <strong>日本語</strong> ·
   <a href="README.hi.md">हिन्दी</a> ·
   <a href="README.he.md">עברית</a>
+</p>
+
+<p align="center">
+  <a href="./SECURITY.md#security-scanning">
+    <img src="https://img.shields.io/badge/Scanned%20by-JFrog%20Xray-40BE46?style=for-the-badge&logo=jfrog&logoColor=white&labelColor=1F2328" alt="JFrog Xray でスキャン済み" height="38">
+  </a>
+</p>
+
+<p align="center">
+  <sub>依存関係・ソースコード・シークレット・IaC を <code>main</code> への push ごとにスキャンしています。</sub>
 </p>
 
 ---

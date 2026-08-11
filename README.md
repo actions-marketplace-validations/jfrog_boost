@@ -41,6 +41,16 @@
   <a href="README.he.md">עברית</a>
 </p>
 
+<p align="center">
+  <a href="./SECURITY.md#security-scanning">
+    <img src="https://img.shields.io/badge/Scanned%20by-JFrog%20Xray-40BE46?style=for-the-badge&logo=jfrog&logoColor=white&labelColor=1F2328" alt="Scanned by JFrog Xray" height="38">
+  </a>
+</p>
+
+<p align="center">
+  <sub>Dependencies, source, secrets, and IaC — scanned on every push to <code>main</code>. <a href="#security--privacy">What that covers</a>.</sub>
+</p>
+
 ---
 
 <p align="center">
@@ -166,6 +176,20 @@ boost update
 See the [full documentation](https://boost.jfrog.com/docs/en/overview/) for commands, configuration, and OpenTelemetry export.
 
 ## Security & Privacy
+
+Boost's source repository is scanned on every push to `main` — the same commits every release is built from — by [Frogbot](https://github.com/jfrog/frogbot), running JFrog Xray with JFrog Advanced Security.
+
+| | What gets scanned |
+| :---: | --- |
+| ✓ | **Dependencies (SCA)** — Go modules and npm trees across every module in the repo, matched against JFrog's vulnerability database |
+| ✓ | **Contextual Analysis** — checks whether a reported CVE is actually reachable from Boost's code, so real risk is not buried in noise |
+| ✓ | **Malicious packages** — dependencies flagged as malicious are caught before they reach a build |
+| ✓ | **Secrets** — every tracked file is scanned for leaked credentials and tokens |
+| ✓ | **Source code (SAST)** — Boost's own Go and TypeScript sources |
+| ✓ | **Infrastructure as Code** — CI workflows and deployment definitions |
+| ✓ | **SBOM** — a component inventory is generated per build target on every scan |
+
+Findings land as code-scanning alerts and automated fix pull requests on the source repository. See [SECURITY.md](./SECURITY.md#security-scanning) for the full scanning and disclosure policy.
 
 - **Local-first.** Command history and raw logs stay on your machine.
 - **Only metadata leaves.** When Boost sends usage data, it goes only to JFrog to help improve the product. Exported metadata includes timing, exit code, and cache stats, never raw logs, file contents, or env values. Secrets matching patterns like `*_TOKEN`, `*_SECRET`, `AWS_*`, `DATABASE_URL` are redacted before write or export.

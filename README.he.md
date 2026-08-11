@@ -24,8 +24,7 @@
   <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/downloads/jfrog/boost/total?color=6f42c1" alt="הורדות"></a>
   <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/github/stars/jfrog/boost?style=flat&color=yellow" alt="כוכבים ב-GitHub"></a><br>
   <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="מותאם לסוכנים">
-  <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
-</p>
+  <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry"></p>
 
 <p align="center" dir="rtl">
   <sub>בחסות <a href="https://jfrog.com"><strong>JFrog</strong></a></sub>
@@ -39,6 +38,16 @@
   <a href="README.ja.md">日本語</a> ·
   <a href="README.hi.md">हिन्दी</a> ·
   <strong>עברית</strong>
+</p>
+
+<p align="center">
+  <a href="./SECURITY.md#security-scanning">
+    <img src="https://img.shields.io/badge/Scanned%20by-JFrog%20Xray-40BE46?style=for-the-badge&logo=jfrog&logoColor=white&labelColor=1F2328" alt="נסרק על ידי JFrog Xray" height="38">
+  </a>
+</p>
+
+<p align="center" dir="rtl">
+  <sub>תלויות, קוד מקור, סודות ותשתית כקוד (IaC) — נסרקים בכל push ל-<code>main</code>.</sub>
 </p>
 
 ---
