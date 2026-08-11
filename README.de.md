@@ -25,6 +25,7 @@
   <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/github/stars/jfrog/boost?style=flat&color=yellow" alt="GitHub-Sterne"></a><br>
   <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="Agent-nativ">
   <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
+  <a href="./SECURITY.md#security-scanning"><img src="https://img.shields.io/badge/scanned%20by-JFrog%20Xray-40BE46?logo=jfrog&logoColor=white" alt="Geprüft von JFrog Xray"></a>
 </p>
 
 <p align="center">
