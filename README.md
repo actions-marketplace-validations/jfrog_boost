@@ -25,7 +25,6 @@
   <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/github/stars/jfrog/boost?style=flat&color=yellow" alt="Stars"></a><br>
   <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="Agent-native">
   <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
-  <a href="./SECURITY.md#security-scanning"><img src="https://img.shields.io/badge/scanned%20by-JFrog%20Xray-40BE46?logo=jfrog&logoColor=white" alt="Scanned by JFrog Xray"></a>
 </p>
 
 <p align="center">
@@ -40,6 +39,16 @@
   <a href="README.ja.md">日本語</a> ·
   <a href="README.hi.md">हिन्दी</a> ·
   <a href="README.he.md">עברית</a>
+</p>
+
+<p align="center">
+  <a href="./SECURITY.md#security-scanning">
+    <img src="https://img.shields.io/badge/Scanned%20by-JFrog%20Xray-40BE46?style=for-the-badge&logo=jfrog&logoColor=white&labelColor=1F2328" alt="Scanned by JFrog Xray" height="38">
+  </a>
+</p>
+
+<p align="center">
+  <sub>Dependencies, source, secrets, and IaC — scanned on every push to <code>main</code>. <a href="#security--privacy">What that covers</a>.</sub>
 </p>
 
 ---
@@ -168,15 +177,7 @@ See the [full documentation](https://boost.jfrog.com/docs/en/overview/) for comm
 
 ## Security & Privacy
 
-<p align="center">
-  <a href="./SECURITY.md#security-scanning">
-    <img src="https://img.shields.io/badge/Scanned%20by-JFrog%20Xray-40BE46?style=for-the-badge&logo=jfrog&logoColor=white&labelColor=1F2328" alt="Scanned by JFrog Xray" height="38">
-  </a>
-</p>
-
-<p align="center">
-  <sub>Boost's source repository is scanned on every push to <code>main</code> — the same commits every release is built from — by <a href="https://github.com/jfrog/frogbot">Frogbot</a>, running JFrog Xray with JFrog Advanced Security.</sub>
-</p>
+Boost's source repository is scanned on every push to `main` — the same commits every release is built from — by [Frogbot](https://github.com/jfrog/frogbot), running JFrog Xray with JFrog Advanced Security.
 
 | | What gets scanned |
 | :---: | --- |

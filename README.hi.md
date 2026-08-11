@@ -24,9 +24,7 @@
   <a href="https://github.com/jfrog/boost/releases"><img src="https://img.shields.io/github/downloads/jfrog/boost/total?color=6f42c1" alt="डाउनलोड्स"></a>
   <a href="https://github.com/jfrog/boost/stargazers"><img src="https://img.shields.io/github/stars/jfrog/boost?style=flat&color=yellow" alt="स्टार्स"></a><br>
   <img src="https://img.shields.io/badge/agent--native-brightgreen" alt="एजेंट-नेटिव">
-  <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
-  <a href="./SECURITY.md#security-scanning"><img src="https://img.shields.io/badge/scanned%20by-JFrog%20Xray-40BE46?logo=jfrog&logoColor=white" alt="JFrog Xray द्वारा स्कैन किया गया"></a>
-</p>
+  <img src="https://img.shields.io/badge/OpenTelemetry-enabled-blueviolet?logo=opentelemetry&logoColor=white" alt="OpenTelemetry"></p>
 
 <p align="center">
   <sub><a href="https://jfrog.com"><strong>JFrog</strong></a> द्वारा प्रायोजित</sub>
@@ -40,6 +38,16 @@
   <a href="README.ja.md">日本語</a> ·
   <strong>हिन्दी</strong> ·
   <a href="README.he.md">עברית</a>
+</p>
+
+<p align="center">
+  <a href="./SECURITY.md#security-scanning">
+    <img src="https://img.shields.io/badge/Scanned%20by-JFrog%20Xray-40BE46?style=for-the-badge&logo=jfrog&logoColor=white&labelColor=1F2328" alt="JFrog Xray द्वारा स्कैन किया गया" height="38">
+  </a>
+</p>
+
+<p align="center">
+  <sub>डिपेंडेंसी, सोर्स कोड, सीक्रेट्स और IaC — <code>main</code> पर हर push पर स्कैन किए जाते हैं।</sub>
 </p>
 
 ---
