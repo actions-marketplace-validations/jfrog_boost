@@ -73,8 +73,8 @@ Boost spart nie auf Kosten der Qualität. Es kürzt nur Inhalte, die bedenkenlos
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4" width="768" controls muted loop playsinline>
-    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4">Boost in Aktion ansehen</a>
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted loop playsinline>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Boost in Aktion ansehen</a>
   </video>
 </p>
 

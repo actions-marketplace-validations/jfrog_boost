@@ -73,8 +73,8 @@ Boost टोकन बचाने के लिए कभी क्वालि
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4" width="768" controls muted loop playsinline>
-    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4">Boost को काम करते हुए देखें</a>
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted loop playsinline>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Boost को काम करते हुए देखें</a>
   </video>
 </p>
 

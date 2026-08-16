@@ -73,8 +73,8 @@ Boost nunca sacrifica calidad para ahorrar. Solo elimina lo que puede descartars
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4" width="768" controls muted loop playsinline>
-    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4">Ver Boost en acción</a>
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted loop playsinline>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Ver Boost en acción</a>
   </video>
 </p>
 

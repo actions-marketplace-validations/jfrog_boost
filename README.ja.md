@@ -73,8 +73,8 @@ Boost はトークン節約のために品質を犠牲にしません。安全�
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4" width="768" controls muted loop playsinline>
-    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4">Boost の動作を見る</a>
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted loop playsinline>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Boost の動作を見る</a>
   </video>
 </p>
 
