@@ -146,6 +146,10 @@ $ boost npm ci
 boost report
 ```
 
+<p align="center">
+  <img src=".github/assets/boost-ui-dashboard.png" alt="boost report dashboard: context tokens saved over time, with CLI filter and Code Base Exploration breakdowns" width="768">
+</p>
+
 ターミナルで文章形式の要約を表示するには:
 
 ```bash

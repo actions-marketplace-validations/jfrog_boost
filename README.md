@@ -147,6 +147,10 @@ After wrapping commands, open the interactive web report:
 boost report
 ```
 
+<p align="center">
+  <img src=".github/assets/boost-ui-dashboard.png" alt="boost report dashboard: context tokens saved over time, with CLI filter and Code Base Exploration breakdowns" width="768">
+</p>
+
 For a terminal narrative summary:
 
 ```bash
