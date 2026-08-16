@@ -73,13 +73,10 @@ Boost spart nie auf Kosten der Qualität. Es kürzt nur Inhalte, die bedenkenlos
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
-    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Boost in Aktion ansehen</a>
-  </video>
-</p>
-
-<p align="center">
-  <sub>Am Smartphone? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">Sieh dir die vertikale Version an</a>.</sub>
+  <picture>
+    <source srcset=".github/assets/boost-intro-mobile.gif" media="(max-width: 600px)">
+    <img src=".github/assets/boost-intro.gif" alt="Boost-Intro: das JFrog-boost-Logo und ein Rundgang durch Installation, Task-Ausführung und boost report" width="768">
+  </picture>
 </p>
 
 ## Schnellstart

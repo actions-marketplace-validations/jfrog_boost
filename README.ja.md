@@ -73,13 +73,10 @@ Boost はトークン節約のために品質を犠牲にしません。安全�
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
-    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Boost の動作を見る</a>
-  </video>
-</p>
-
-<p align="center">
-  <sub>スマホの方は<a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">縦型バージョン</a>をご覧ください。</sub>
+  <picture>
+    <source srcset=".github/assets/boost-intro-mobile.gif" media="(max-width: 600px)">
+    <img src=".github/assets/boost-intro.gif" alt="Boost の紹介: JFrog boost のロゴに続き、インストール、タスク実行、boost report のウォークスルー" width="768">
+  </picture>
 </p>
 
 ## クイックスタート

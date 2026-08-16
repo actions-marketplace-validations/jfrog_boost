@@ -73,13 +73,10 @@
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
-    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">צפו ב-Boost בפעולה</a>
-  </video>
-</p>
-
-<p align="center">
-  <sub>בטלפון? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">צפו בגרסה האנכית</a>.</sub>
+  <picture>
+    <source srcset=".github/assets/boost-intro-mobile.gif" media="(max-width: 600px)">
+    <img src=".github/assets/boost-intro.gif" alt="הכרות עם Boost: הלוגו של JFrog boost, ואחריו הדגמה של התקנה, הרצת משימה ו-boost report" width="768">
+  </picture>
 </p>
 
 ## התחלה מהירה

@@ -73,13 +73,10 @@ Boost टोकन बचाने के लिए कभी क्वालि
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
-    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Boost को काम करते हुए देखें</a>
-  </video>
-</p>
-
-<p align="center">
-  <sub>फ़ोन पर देख रहे हैं? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">वर्टिकल वर्ज़न देखें</a>।</sub>
+  <picture>
+    <source srcset=".github/assets/boost-intro-mobile.gif" media="(max-width: 600px)">
+    <img src=".github/assets/boost-intro.gif" alt="Boost परिचय: JFrog boost लोगो, फिर इंस्टॉल करने, टास्क चलाने और boost report का वॉकथ्रू" width="768">
+  </picture>
 </p>
 
 ## क्विक स्टार्ट
