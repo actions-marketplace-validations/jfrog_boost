@@ -74,9 +74,13 @@ Boost never trades quality for savings. It trims only what's safe to drop, so ag
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted loop playsinline>
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
     <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Watch Boost in action</a>
   </video>
+</p>
+
+<p align="center">
+  <sub>On a phone? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">Watch the vertical cut</a>.</sub>
 </p>
 
 ## Quick start

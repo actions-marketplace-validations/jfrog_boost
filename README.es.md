@@ -73,9 +73,13 @@ Boost nunca sacrifica calidad para ahorrar. Solo elimina lo que puede descartars
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted loop playsinline>
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
     <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Ver Boost en acción</a>
   </video>
+</p>
+
+<p align="center">
+  <sub>¿Desde el móvil? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">Mira la versión vertical</a>.</sub>
 </p>
 
 ## Inicio rápido

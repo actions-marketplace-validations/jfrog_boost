@@ -73,9 +73,13 @@ Boost ne sacrifie jamais la qualité au nom des économies. Il ne supprime que c
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted loop playsinline>
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
     <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Voir Boost en action</a>
   </video>
+</p>
+
+<p align="center">
+  <sub>Sur mobile ? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">Regardez la version verticale</a>.</sub>
 </p>
 
 ## Démarrage rapide

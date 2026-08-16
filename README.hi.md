@@ -73,9 +73,13 @@ Boost टोकन बचाने के लिए कभी क्वालि
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted loop playsinline>
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
     <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Boost को काम करते हुए देखें</a>
   </video>
+</p>
+
+<p align="center">
+  <sub>फ़ोन पर देख रहे हैं? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">वर्टिकल वर्ज़न देखें</a>।</sub>
 </p>
 
 ## क्विक स्टार्ट

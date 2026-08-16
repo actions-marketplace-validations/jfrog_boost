@@ -73,9 +73,13 @@
 </p>
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted loop playsinline>
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
     <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">צפו ב-Boost בפעולה</a>
   </video>
+</p>
+
+<p align="center">
+  <sub>בטלפון? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">צפו בגרסה האנכית</a>.</sub>
 </p>
 
 ## התחלה מהירה
