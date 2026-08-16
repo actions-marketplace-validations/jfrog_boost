@@ -70,11 +70,17 @@
 Boost never trades quality for savings. It trims only what's safe to drop, so agent output stays just as sharp. Our [Terminal-Bench 2.0 benchmark](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) shows it: identical task pass rate, ~12% lower cost — Boost keeps agents optimized without ever breaking their stride.
 
 <p align="center">
-  <picture>
-    <source srcset=".github/assets/boost-how-to-use-dark.gif" media="(prefers-color-scheme: dark)">
-    <source srcset=".github/assets/boost-how-to-use-light.gif" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-how-to-use-light.gif" alt="Boost how to use: install, boost init, run a task, boost report" width="768">
-  </picture>
+  <img src=".github/assets/boost-ui-dashboard.png" alt="boost report dashboard: context tokens saved over time, with CLI filter and Code Base Exploration breakdowns" width="768">
+</p>
+
+<p align="center">
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Watch Boost in action</a>
+  </video>
+</p>
+
+<p align="center">
+  <sub>On a phone? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">Watch the vertical cut</a>.</sub>
 </p>
 
 ## Quick start

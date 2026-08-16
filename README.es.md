@@ -69,11 +69,17 @@
 Boost nunca sacrifica calidad para ahorrar. Solo elimina lo que puede descartarse sin riesgo, por lo que la salida del agente conserva la misma precisión. Nuestra [evaluación comparativa con Terminal-Bench 2.0](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) lo demuestra: la misma tasa de éxito en las tareas con un coste aproximadamente un 12 % inferior. Boost mantiene optimizados a los agentes sin interrumpir nunca su ritmo.
 
 <p align="center">
-  <picture>
-    <source srcset=".github/assets/boost-how-to-use-dark.gif" media="(prefers-color-scheme: dark)">
-    <source srcset=".github/assets/boost-how-to-use-light.gif" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-how-to-use-light.gif" alt="Cómo usar Boost: instalar, boost init, ejecutar una tarea, boost report" width="768">
-  </picture>
+  <img src=".github/assets/boost-ui-dashboard.png" alt="Panel de boost report: tokens de contexto ahorrados con el tiempo, con el desglose de filtros de CLI y exploración del código" width="768">
+</p>
+
+<p align="center">
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4" width="768" controls muted>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro.mp4">Ver Boost en acción</a>
+  </video>
+</p>
+
+<p align="center">
+  <sub>¿Desde el móvil? <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-intro-mobile.mp4">Mira la versión vertical</a>.</sub>
 </p>
 
 ## Inicio rápido
