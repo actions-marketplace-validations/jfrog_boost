@@ -69,11 +69,13 @@
 עם Boost לעולם לא מקריבים איכות לטובת חיסכון. הכלי מסיר רק את מה שניתן להשמיט בבטחה, כך שפלט הסוכן נשאר איכותי באותה המידה. [הבנצ'מרק Terminal-Bench 2.0 שלנו](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) ממחיש זאת: שיעור הצלחה זהה במשימות ועלות נמוכה בכ־12% — Boost שומר על יעילות הסוכנים בלי לפגוע ברצף עבודתם.
 
 <p align="center">
-  <picture>
-    <source srcset=".github/assets/boost-how-to-use-dark.gif" media="(prefers-color-scheme: dark)">
-    <source srcset=".github/assets/boost-how-to-use-light.gif" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-how-to-use-light.gif" alt="כיצד להשתמש ב-Boost: התקנה, boost init, הרצת משימה, boost report" width="768">
-  </picture>
+  <img src=".github/assets/boost-ui-dashboard.png" alt="לוח הבקרה של boost report: טוקנים של הקשר שנחסכו לאורך זמן, בפילוח מסנני CLI וחקר בסיס הקוד" width="768">
+</p>
+
+<p align="center">
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4" width="768" controls muted loop playsinline>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4">צפו ב-Boost בפעולה</a>
+  </video>
 </p>
 
 ## התחלה מהירה
@@ -145,10 +147,6 @@ $ boost npm ci
 ```bash
 boost report
 ```
-
-<p align="center">
-  <img src=".github/assets/boost-ui-dashboard.png" alt="boost report dashboard: context tokens saved over time, with CLI filter and Code Base Exploration breakdowns" width="768">
-</p>
 
 לקבלת סיכום מילולי במסוף:
 

@@ -69,11 +69,13 @@
 Boost टोकन बचाने के लिए कभी क्वालिटी से समझौता नहीं करता। यह सिर्फ़ वही हटाता है जिसे सुरक्षित रूप से हटाया जा सकता है, इसलिए एजेंट्स का आउटपुट उतना ही सटीक और उपयोगी रहता है। हमारा [Terminal-Bench 2.0 बेंचमार्क](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) यही दिखाता है: एक जैसी टास्क पास रेट और ~12% कम लागत — Boost एजेंट्स के काम में रुकावट डाले बिना उन्हें ऑप्टिमाइज़ रखता है।
 
 <p align="center">
-  <picture>
-    <source srcset=".github/assets/boost-how-to-use-dark.gif" media="(prefers-color-scheme: dark)">
-    <source srcset=".github/assets/boost-how-to-use-light.gif" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-how-to-use-light.gif" alt="Boost इस्तेमाल करने का तरीका: इंस्टॉल करें, boost init चलाएँ, टास्क चलाएँ, boost report देखें" width="768">
-  </picture>
+  <img src=".github/assets/boost-ui-dashboard.png" alt="boost report डैशबोर्ड: समय के साथ बचाए गए कॉन्टेक्स्ट टोकन, CLI फ़िल्टर और कोडबेस एक्सप्लोरेशन के ब्रेकडाउन के साथ" width="768">
+</p>
+
+<p align="center">
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4" width="768" controls muted loop playsinline>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4">Boost को काम करते हुए देखें</a>
+  </video>
 </p>
 
 ## क्विक स्टार्ट
@@ -145,10 +147,6 @@ $ boost npm ci
 ```bash
 boost report
 ```
-
-<p align="center">
-  <img src=".github/assets/boost-ui-dashboard.png" alt="boost report dashboard: context tokens saved over time, with CLI filter and Code Base Exploration breakdowns" width="768">
-</p>
 
 टर्मिनल में नैरेटिव समरी के लिए:
 

@@ -69,11 +69,13 @@
 Boost はトークン節約のために品質を犠牲にしません。安全に省ける情報だけを削るため、エージェントの出力品質は変わりません。[Terminal-Bench 2.0 ベンチマーク](https://boost.jfrog.com/blog/benchmarks-terminal-bench/)がそれを実証しています。タスク成功率は同一で、コストは約 12% 低下しています。Boost はエージェントの動作を妨げることなく、その効率を高く保ちます。
 
 <p align="center">
-  <picture>
-    <source srcset=".github/assets/boost-how-to-use-dark.gif" media="(prefers-color-scheme: dark)">
-    <source srcset=".github/assets/boost-how-to-use-light.gif" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-how-to-use-light.gif" alt="Boost の使い方: インストール、boost init、タスクの実行、boost report" width="768">
-  </picture>
+  <img src=".github/assets/boost-ui-dashboard.png" alt="boost report ダッシュボード: 節約されたコンテキストトークンの推移と、CLI フィルター / コードベース探索の内訳" width="768">
+</p>
+
+<p align="center">
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4" width="768" controls muted loop playsinline>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4">Boost の動作を見る</a>
+  </video>
 </p>
 
 ## クイックスタート
@@ -145,10 +147,6 @@ $ boost npm ci
 ```bash
 boost report
 ```
-
-<p align="center">
-  <img src=".github/assets/boost-ui-dashboard.png" alt="boost report dashboard: context tokens saved over time, with CLI filter and Code Base Exploration breakdowns" width="768">
-</p>
 
 ターミナルで文章形式の要約を表示するには:
 

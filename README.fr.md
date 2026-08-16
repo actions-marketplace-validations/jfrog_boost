@@ -69,11 +69,13 @@
 Boost ne sacrifie jamais la qualité au nom des économies. Il ne supprime que ce qui peut l'être sans risque, afin que la sortie transmise à l'agent reste tout aussi précise. Notre [benchmark Terminal-Bench 2.0](https://boost.jfrog.com/blog/benchmarks-terminal-bench/) le confirme : même taux de réussite des tâches, avec un coût inférieur de ~12 % — Boost maintient les agents à leur niveau optimal sans jamais les ralentir.
 
 <p align="center">
-  <picture>
-    <source srcset=".github/assets/boost-how-to-use-dark.gif" media="(prefers-color-scheme: dark)">
-    <source srcset=".github/assets/boost-how-to-use-light.gif" media="(prefers-color-scheme: light)">
-    <img src=".github/assets/boost-how-to-use-light.gif" alt="Utilisation de Boost : installation, boost init, exécution d'une tâche, boost report" width="768">
-  </picture>
+  <img src=".github/assets/boost-ui-dashboard.png" alt="Tableau de bord boost report : tokens de contexte économisés au fil du temps, avec la répartition filtres CLI et exploration du code" width="768">
+</p>
+
+<p align="center">
+  <video src="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4" width="768" controls muted loop playsinline>
+    <a href="https://raw.githubusercontent.com/jfrog/boost/main/.github/assets/boost-influencer-pc.mp4">Voir Boost en action</a>
+  </video>
 </p>
 
 ## Démarrage rapide
@@ -145,10 +147,6 @@ Une fois les commandes encapsulées, ouvrez le rapport web interactif :
 ```bash
 boost report
 ```
-
-<p align="center">
-  <img src=".github/assets/boost-ui-dashboard.png" alt="boost report dashboard: context tokens saved over time, with CLI filter and Code Base Exploration breakdowns" width="768">
-</p>
 
 Pour obtenir un résumé en prose dans le terminal :
 
