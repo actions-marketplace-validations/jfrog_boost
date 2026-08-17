@@ -55,7 +55,12 @@ else
   fi
   GITHUB_URL="https://github.com/$REPO/releases/download/$TAG/$ARCHIVE"
   echo "→ Downloading $ARCHIVE ($TAG)"
-  curl -fsSL "$GITHUB_URL" -o "$TMP/$ARCHIVE"
+  # Show curl's progress bar on interactive terminals; stay silent in CI/pipes.
+  if [ -t 2 ] && [ -z "${CI:-}" ]; then
+    curl --progress-bar -fL "$GITHUB_URL" -o "$TMP/$ARCHIVE"
+  else
+    curl -fsSL "$GITHUB_URL" -o "$TMP/$ARCHIVE"
+  fi
   tar -xzf "$TMP/$ARCHIVE" -C "$TMP"
   [ -f "$TMP/boost" ] || { echo "archive missing 'boost' binary" >&2; exit 1; }
   chmod +x "$TMP/boost"

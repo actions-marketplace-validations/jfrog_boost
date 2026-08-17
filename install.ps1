@@ -10,7 +10,6 @@
 $ErrorActionPreference = 'Stop'
 
 $Repo = 'jfrog/boost'
-$JfrogBase = 'https://jfrogboost.jfrog.io/public/generic/boost-binaries'
 $From = if ($env:BOOST_INSTALL_FROM) { $env:BOOST_INSTALL_FROM } else { 'latest' }
 $InstallDir = if ($env:BOOST_INSTALL_DIR) {
     $env:BOOST_INSTALL_DIR
@@ -58,27 +57,26 @@ try {
             }
         }
 
-        $Binary = 'boost-windows-amd64.exe'
         $Archive = 'boost-windows-amd64.zip'
-        $JfrogUrl = "$JfrogBase/$Tag/$Binary"
-        Write-Host "→ Downloading $Binary ($Tag)"
-        & curl.exe -fsSL $JfrogUrl -o $ExePath
-        if ($LASTEXITCODE -eq 0 -and (Test-Path -LiteralPath $ExePath)) {
-            Write-Host "→ Downloaded successfully from JFrog Fly ($JfrogUrl)"
+        $GithubUrl = "https://github.com/$Repo/releases/download/$Tag/$Archive"
+        Write-Host "→ Downloading $Archive ($Tag)"
+        $ZipPath = Join-Path $Tmp $Archive
+        # Show curl's progress bar on interactive terminals; stay silent in CI/pipes.
+        $curlArgs = @('-fL', $GithubUrl, '-o', $ZipPath)
+        if (-not $env:CI -and [Environment]::UserInteractive) {
+            $curlArgs = @('--progress-bar') + $curlArgs
         } else {
-            $GithubUrl = "https://github.com/$Repo/releases/download/$Tag/$Archive"
-            Write-Host '→ JFrog Fly download failed, trying GitHub releases...'
-            $ZipPath = Join-Path $Tmp $Archive
-            & curl.exe -fsSL $GithubUrl -o $ZipPath
-            if ($LASTEXITCODE -ne 0) {
-                throw "download failed: $GithubUrl"
-            }
-            Expand-Archive -LiteralPath $ZipPath -DestinationPath $Tmp -Force
-            if (-not (Test-Path -LiteralPath $ExePath)) {
-                throw "archive missing 'boost.exe' binary"
-            }
-            Write-Host "→ Downloaded successfully from GitHub releases ($GithubUrl)"
+            $curlArgs = @('-sS') + $curlArgs
         }
+        & curl.exe @curlArgs
+        if ($LASTEXITCODE -ne 0) {
+            throw "download failed: $GithubUrl"
+        }
+        Expand-Archive -LiteralPath $ZipPath -DestinationPath $Tmp -Force
+        if (-not (Test-Path -LiteralPath $ExePath)) {
+            throw "archive missing 'boost.exe' binary"
+        }
+        Write-Host "→ Downloaded successfully from GitHub releases ($GithubUrl)"
     }
 
     if (-not (Test-Path -LiteralPath $ExePath)) {
@@ -104,10 +102,7 @@ try {
     Write-Banner
     Write-Host '→ Boost is installed!'
     Write-Host ''
-    Write-Host 'To run boost in this terminal right now, restart PowerShell or run:'
-    Write-Host "  `$env:PATH = '$InstallDir;' + `$env:PATH"
-    Write-Host ''
-    Write-Host 'Then run:'
+    Write-Host 'You can start by running:'
     Write-Host '   boost init'
 } finally {
     Remove-Item -LiteralPath $Tmp -Recurse -Force -ErrorAction SilentlyContinue
