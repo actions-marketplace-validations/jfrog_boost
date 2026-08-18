@@ -54213,7 +54213,7 @@ class RequestError extends Error {
 
 
 // pkg/dist-src/version.js
-var dist_bundle_VERSION = "10.0.13";
+var dist_bundle_VERSION = "10.0.14";
 
 // pkg/dist-src/defaults.js
 var defaults_default = {
@@ -57926,7 +57926,7 @@ async function ensureBoostConfig() {
             return;
         }
         await external_fs_.promises.mkdir(external_path_.dirname(configPath), { recursive: true });
-        await external_fs_.promises.writeFile(configPath, content, "utf-8");
+        await external_fs_.promises.writeFile(configPath, content, { encoding: "utf-8", mode: 0o644 });
         core.info(`Fetched ${CONFIG_REL_PATH} from ${owner}/${repo} via GitHub API (${source})`);
     }
     catch (err) {
