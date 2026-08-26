@@ -139,7 +139,7 @@ Der Agent sieht die nützliche Zusammenfassung statt des Scrollbacks. Im Fehlerf
 | Fähigkeit | Boost | RTK | Headroom | Caveman |
 | --- | :---: | :---: | :---: | :---: |
 | Kompression der Befehlsausgabe | ✓ | ✓ | ✓ | × |
-| Kompression des vollständigen Kontexts und RAG-Kompression | × | × | ✓ | × |
+| Kompression des vollständigen Kontexts und RAG-Kompression | ✓ | × | ✓ | × |
 | Kompression der Assistentenantworten | × | × | × | ✓ |
 | Wiederherstellung der Befehlsausgabe | ✓ | ✓ | ✓ | × |
 | Ursprüngliche ausführbare Datei für native Freigabe sichtbar | ✓ | × | — | — |

@@ -139,7 +139,7 @@ L'agent voit le résumé utile, pas l'historique du terminal. En cas d'échec, B
 | Fonctionnalité | Boost | RTK | Headroom | Caveman |
 | --- | :---: | :---: | :---: | :---: |
 | Compression de la sortie des commandes | ✓ | ✓ | ✓ | × |
-| Compression du contexte complet et du RAG | × | × | ✓ | × |
+| Compression du contexte complet et du RAG | ✓ | × | ✓ | × |
 | Compression des réponses de l'assistant | × | × | × | ✓ |
 | Récupération de la sortie des commandes | ✓ | ✓ | ✓ | × |
 | L'interface d'approbation native affiche l'exécutable d'origine | ✓ | × | — | — |
