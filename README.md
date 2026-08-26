@@ -140,7 +140,7 @@ The agent sees the useful summary, not the scrollback. On failures, Boost keeps 
 | Capability | Boost | RTK | Headroom | Caveman |
 | --- | :---: | :---: | :---: | :---: |
 | Command output compression | ✓ | ✓ | ✓ | × |
-| Full-context and RAG compression | × | × | ✓ | × |
+| Full-context and RAG compression | ✓ | × | ✓ | × |
 | Assistant reply compression | × | × | × | ✓ |
 | Command output recovery | ✓ | ✓ | ✓ | × |
 | Native approval sees original executable | ✓ | × | — | — |

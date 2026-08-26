@@ -139,7 +139,7 @@ El agente ve el resumen útil, no todo el historial de la terminal. Cuando se pr
 | Capacidad | Boost | RTK | Headroom | Caveman |
 | --- | :---: | :---: | :---: | :---: |
 | Compresión de la salida de comandos | ✓ | ✓ | ✓ | × |
-| Compresión del contexto completo y compresión RAG | × | × | ✓ | × |
+| Compresión del contexto completo y compresión RAG | ✓ | × | ✓ | × |
 | Compresión de las respuestas del asistente | × | × | × | ✓ |
 | Recuperación de la salida de comandos | ✓ | ✓ | ✓ | × |
 | El sistema de aprobación nativo recibe el ejecutable original | ✓ | × | — | — |
